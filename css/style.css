@@ -5,6 +5,7 @@ body {
   background: black;
   color: #f5f5f5;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -75,6 +76,35 @@ body {
   z-index: 999;
 }
 
+.slider {
+  background: #111;
+  padding: 40px 20px;
+}
+
+.carousel {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
 #server-info, #socials {
   margin: 40px 0;
 }
@@ -92,4 +122,10 @@ body {
 footer {
   background: #111;
   padding: 20px;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
 }
